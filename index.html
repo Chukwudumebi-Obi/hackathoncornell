@@ -5,11 +5,21 @@
 <iframe src="https://www.google.com/maps/d/embed?mid=1AgyqXERQnLRjHyB2upji924UhFhT7AVx" width="1100" height="480"></iframe>
 <h3>Interested in going? Let us know!</h3>
 <h4>Which bench are you heading?</h4>
-<select name="dropdown_list">
+<!-- <select name="dropdown_list">
   {% for each in dropdown_list %}
   <option value="{{each}}">{{each}}</option>
   {% endfor %}
-</select>
+</select> -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button">The Slope Benches</button>
+    <button class="dropdown-item" type="button">The Class of 1927 Bench</button>
+    <button class="dropdown-item" type="button">Arts Quad Bench</button>
+  </div>
+</div>
 <h4>Help us track density by entering number of people you're going with!</h4>
 <form method="POST" action="/send">
   <div class="form-group">
