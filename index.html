@@ -3,19 +3,11 @@
 {% endblock %}
 {% block content %}
 <iframe src="https://www.google.com/maps/d/embed?mid=1AgyqXERQnLRjHyB2upji924UhFhT7AVx" width="1100" height="480"></iframe>
+<h3>Interested in going? Let us know!</h3>
+<h4>Please enter the number of people you are going with so we can track density!</h4>
+<form method="POST" action="/send">
+  <div class="form-group">
+      <input type="text" name="persons">
+  </div>
+  <input class="btn btn-primary" type="submit" value="submit">
 {% endblock %}
-<!-- <!doctype html>
-<html> 
-  <head> 
-    <link rel="stylesheet" href="style.css"> </link>
-    <h1>Bench Finder</h1>
-
-  </head>
-
-<body>
-  <h1>Map of Cornell!</h1>
-  <iframe src="https://www.google.com/maps/d/embed?mid=1AgyqXERQnLRjHyB2upji924UhFhT7AVx" width="1100" height="480"></iframe>
-
-  
-</body> 
-</html> -->
