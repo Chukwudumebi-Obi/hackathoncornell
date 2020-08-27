@@ -4,7 +4,13 @@
 {% block content %}
 <iframe src="https://www.google.com/maps/d/embed?mid=1AgyqXERQnLRjHyB2upji924UhFhT7AVx" width="1100" height="480"></iframe>
 <h3>Interested in going? Let us know!</h3>
-<h4>Please enter the number of people you are going with so we can track density!</h4>
+<h4>Which bench are you heading?</h4>
+<select name="dropdown_list">
+  {% for each in dropdown_list %}
+  <option value="{{each}}">{{each}}</option>
+  {% endfor %}
+</select>
+<h4>Help us track density by entering number of people you're going with!</h4>
 <form method="POST" action="/send">
   <div class="form-group">
       <input type="text" name="persons">
