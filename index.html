@@ -3,8 +3,13 @@
 {% endblock %}
 {% block content %}
 <iframe src="https://www.google.com/maps/d/embed?mid=1AgyqXERQnLRjHyB2upji924UhFhT7AVx" width="1100" height="480"></iframe>
-<h3>Interested in going? Let us know!</h3>
-<h4>Which bench are you heading?</h4>
+<br></br>
+<style>
+  h4{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  }
+  </style>
+<h4 style="color:#B31B1B">Which bench are you heading?</h4>
 <!-- <select name="dropdown_list">
   {% for each in dropdown_list %}
   <option value="{{each}}">{{each}}</option>
@@ -20,7 +25,7 @@
     <button class="dropdown-item" type="button">Arts Quad Bench</button>
   </div>
 </div>
-<h4>Help us track density by entering number of people you're going with!</h4>
+<h4 style="color:#B31B1B">Help us track density by entering number of people you're going with!</h4>
 <form method="POST" action="/send">
   <div class="form-group">
       <input type="text" name="persons">
