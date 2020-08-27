@@ -18,11 +18,11 @@ def home():
 
 @app.route("/send", methods=['GET', 'POST'])
 def send():
-    if request.method == 'POST':
-        persons = request.form['persons']
-
-        return render_template("persons.html", persons=persons) 
-    return render_template("index.html")
+    dropdown_list = ['The Slope Benches','Class of 1927 Bench']
+    form= ReusableForm()
+    if form.validate_on_submit:
+        return render_template('persons.html', dropdown_list=dropdown_list, form=form)
+    return render_template("index.html", dropdown_list=dropdown_list, form=form)
 
 @app.route("/testsignup")
 def signup():
